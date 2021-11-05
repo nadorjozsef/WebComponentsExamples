@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService, SampleData } from '../../services/data.service';
 
 @Component({
@@ -8,15 +8,17 @@ import { DataService, SampleData } from '../../services/data.service';
 })
 export class DataDisplayComponent implements OnInit {
 
+  @Input() address: string = '';
+
   sampleData: SampleData[] = [];
 
   constructor(private dataService: DataService) {
-    dataService.getData().subscribe(data => {
-      this.sampleData = data;
-    })
   }
 
   ngOnInit(): void {
+    this.dataService.getData(this.address).subscribe(data => {
+      this.sampleData = data;
+    })
   }
 
 }

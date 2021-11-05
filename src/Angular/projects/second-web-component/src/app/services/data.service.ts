@@ -20,7 +20,7 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
-  getData(): Observable<SampleData[]> {
-    return this.http.get<SampleData[]>('http://localhost:5500/data');
+  getData(address: string): Observable<SampleData[]> {
+    return this.http.get<SampleData[]>(address);
   }
 }
