@@ -1,15 +1,50 @@
 <html>
-  <head>
-    <script src="./main.391232d19778292918a8.js"></script>
-    <script src="./polyfills.f824055a3f22351da192.js"></script>
-    <script src="./runtime.ead2653e9a14a3fe45ad.js"></script>
-    <script src="./styles.31d6cfe0d16ae931b73c.css"></script>
-  </head>
-  <body>
-    <p>---------------------------</p>
-    <ui-button></ui-button>
-    <p>---------------------------</p>
-    <ui-button add-clear-button=true></ui-button>
-    <p>---------------------------</p>
-  </body>
+
+<head>
+  <script src="./main.7c804539cbee76bed06c.js"></script>
+  <script src="./polyfills.f824055a3f22351da192.js"></script>
+  <script src="./runtime.ead2653e9a14a3fe45ad.js"></script>
+  <script src="./styles.31d6cfe0d16ae931b73c.css"></script>
+  <style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      height: auto;
+      min-width: 200;
+      max-width: 800;
+      margin: 50;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Web Component examples</h1>
+  <div class="card">
+    <div class="container">
+      <h4>Interactive WebComponent</h4>
+      <ui-button></ui-button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="container">
+      <h4>Interactive WebComponent with a parameter</h4>
+      <ui-button add-clear-button=true></ui-button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="container">
+      <h4>WebComponent connecting to a web service</h4>
+      <data-display></data-display>
+    </div>
+  </div>
+</body>
+
 </html>
