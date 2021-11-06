@@ -45,12 +45,12 @@
   <h1 class="font">Web Component examples</h1>
   <table style="margin-bottom: 500px">
     <tr>
-      <th>Name</th>
+      <th>Details</th>
       <th>Display</th>
       <th>Code</th>
     </tr>
     <tr>
-      <td>Interactive WebComponent</td>
+      <td>An interactive WebComponent is integrated to the page.</td>
       <td>
         <div class="card">
           <div class="container">
@@ -63,20 +63,20 @@
       </td>
     </tr>
     <tr>
-      <td>Styling from the integrating page</td>
+      <td>A WebComponent is styled by the integrating page. A brown color text is applied and also the font style is inherited by the integrating page.</td>
       <td>
         <div class="card">
           <div class="container">
-            <ui-button class="font" style="color: brown;"></ui-button>
+            <ui-button style="color: brown;"></ui-button>
           </div>
         </div>
       </td>
       <td>
-        <code><pre>&lt;ui-button class=&quot;font&quot; style=&quot;color: brown;&quot;&gt;&lt;/ui-button&gt;</pre></code>
+        <code><pre>&lt;ui-button style=&quot;color: brown;&quot;&gt;&lt;/ui-button&gt;</pre></code>
       </td>
     </tr>
     <tr>
-      <td>Setting a parameter from the integrating page</td>
+      <td>A property value of the WebComponent has been set by the integrating page which displays and additional button of the WebComponent.</td>
       <td>
         <div class="card">
           <div class="container">
@@ -89,20 +89,37 @@
       </td>
     </tr>
     <tr>
-      <td>Connecting to a web service</td>
+      <td>The integrating page subscribes to a findished rendering event. This behavior can be observed by simulating a slow network.</td>
       <td>
+        <div id="renderingText">rendering...</div>
         <div class="card">
           <div class="container">
-            <data-display address="http://localhost:5500/data"></data-display>
+            <data-display id="dataDisplay" address="http://localhost:5500/data"></data-display>
+            <script>
+              document.getElementById("dataDisplay").addEventListener('finsihedRendering', () => {
+                document.getElementById("renderingText").innerHTML = "rendering has finished...";
+              });
+            </script>
           </div>
         </div>
       </td>
       <td>
-        <code><pre>&lt;data-display address=&quot;http://localhost:5500/data&quot;&gt;&lt;/data-display&gt;</pre></code>
+        <code><pre>
+&lt;div id=&quot;renderingText&quot;&gt;rendering...&lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;data-display id=&quot;dataDisplay&quot; address=&quot;http://localhost:5500/data&quot;&gt;&lt;/data-display&gt;
+    &lt;script&gt;
+      document.getElementById(&quot;dataDisplay&quot;).addEventListener('finsihedRendering', () =&gt; {
+        document.getElementById(&quot;renderingText&quot;).innerHTML = &quot;rendering has finished...&quot;;
+      });
+    &lt;/script&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></code>
       </td>
     </tr>
     <tr>
-      <td>Switching WebComponents using JS on the integrating page</td>
+      <td>The integrating page switches WebComponents using JS methods.</td>
       <td>
         <button onclick="addUiButtonFunction()">Add UiButton element</button>
         <button onclick="addDataDisplayFunction()">Add DataDisplay element</button>

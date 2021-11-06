@@ -8,6 +8,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <data-display address="http://localhost:5500/data"></data-display>
+  <data-display id="dataDisplay" address="http://localhost:5500/data"></data-display>
+  <script>
+    var v = document.getElementById("dataDisplay");
+    v.addEventListener('finsihedRendering', v => console.log("rendering finished"));
+  </script>
 </body>
 </html>
