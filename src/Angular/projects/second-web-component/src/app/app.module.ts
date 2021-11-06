@@ -3,22 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-
 import { DataDisplayComponent } from './components/data-display/data-display.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     DataDisplayComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  entryComponents: [DataDisplayComponent],
-  providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [DataDisplayComponent]
 })
 export class AppModule implements DoBootstrap {
 
