@@ -1,3 +1,3 @@
 # WebComponents examples
 
-![](./img/use-cases.png)
+![Alt text](./img/use-cases.png?raw=true "use-cases")
