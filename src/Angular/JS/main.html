@@ -43,7 +43,7 @@
 
 <body>
   <h1 class="font">Web Component examples</h1>
-  <table>
+  <table style="margin-bottom: 500px">
     <tr>
       <th>Name</th>
       <th>Display</th>
@@ -99,6 +99,42 @@
       </td>
       <td>
         <code><pre>&lt;data-display address=&quot;http://localhost:5500/data&quot;&gt;&lt;/data-display&gt;</pre></code>
+      </td>
+    </tr>
+    <tr>
+      <td>Switching WebComponents using JS on the integrating page</td>
+      <td>
+        <button onclick="addUiButtonFunction()">Add UiButton element</button>
+        <button onclick="addDataDisplayFunction()">Add DataDisplay element</button>
+        <script>
+          function addUiButtonFunction() {
+            document.getElementById("replaceWebComponent").innerHTML = "<ui-button></ui-button>";
+          }
+          function addDataDisplayFunction() {
+            document.getElementById("replaceWebComponent").innerHTML = "<data-display address=\"http://localhost:5500/data\"></data-display>";
+          }
+        </script>
+        <div class="card">
+          <div class="container" id="replaceWebComponent">
+          </div>
+        </div>
+      </td>
+      <td>
+        <code><pre>
+&lt;button onclick=&quot;addUiButtonFunction()&quot;&gt;Add UiButton element&lt;/button&gt;
+&lt;button onclick=&quot;addDataDisplayFunction()&quot;&gt;Add DataDisplay element&lt;/button&gt;
+&lt;script&gt;
+  function addUiButtonFunction() {
+    document.getElementById(&quot;replaceWebComponent&quot;).innerHTML = &quot;&lt;ui-button&gt;&lt;/ui-button&gt;&quot;;
+  }
+  function addDataDisplayFunction() {
+    document.getElementById(&quot;replaceWebComponent&quot;).innerHTML = &quot;&lt;data-display address=\&quot;http://localhost:5500/data\&quot;&gt;&lt;/data-display&gt;&quot;;
+  }
+&lt;/script&gt;
+&lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;container&quot; id=&quot;replaceWebComponent&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></code>
       </td>
     </tr>
   </table>
