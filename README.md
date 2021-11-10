@@ -15,10 +15,11 @@ http-server
 go to http://127.0.0.1:8080/index.html
 ```
 
-![Alt text](./img/Use-cases.png "use-cases")
-
-## How does it look like in a browser
+## How does it look like
 ![Alt text](./img/WebCapture.jpeg "web-capture")
+
+## How does it work
+![Alt text](./img/Use-cases.png "use-cases")
 
 ## More info
 https://indepth.dev/posts/1116/angular-web-components-a-complete-guide
