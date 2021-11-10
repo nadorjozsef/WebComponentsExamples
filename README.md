@@ -1,5 +1,15 @@
 # WebComponents examples
 
+## How to run
+```
+cd src\DataProviderService\
+dotnet run //to run the backend service
+cd ..
+cd ..
+cd dist
+http-server // the files need to be hosted becasue of the Blazor example 
+```
+
 ![Alt text](./img/Use-cases.png "use-cases")
 
 ## More info
