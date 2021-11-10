@@ -18,3 +18,5 @@ https://indepth.dev/posts/1116/angular-web-components-a-complete-guide
 https://learn.vonage.com/blog/2020/03/24/getting-started-with-web-components-dr/
 
 https://angular.io/guide/elements
+
+https://stackoverflow.com/questions/68180510/how-to-put-a-blazor-wasm-application-into-an-html-custom-element
