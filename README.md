@@ -1,13 +1,18 @@
 # WebComponents examples
 
+## What is needed
+```
+dotnet 6 runtime
+http-server npm package
+```
+
 ## How to run
 ```
 cd src\DataProviderService\
-dotnet run //to run the backend service
-cd ..
-cd ..
+dotnet run
 cd dist
-http-server // the files need to be hosted becasue of the Blazor example 
+http-server
+go to http://127.0.0.1:8080/index.html
 ```
 
 ![Alt text](./img/Use-cases.png "use-cases")
