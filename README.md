@@ -12,6 +12,9 @@ http-server // the files need to be hosted becasue of the Blazor example
 
 ![Alt text](./img/Use-cases.png "use-cases")
 
+## How does it look like in a browser
+![Alt text](./img/WebCapture.jpeg "web-capture")
+
 ## More info
 https://indepth.dev/posts/1116/angular-web-components-a-complete-guide
 
