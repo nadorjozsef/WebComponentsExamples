@@ -14,14 +14,17 @@
     }
   </style>
 
-  <script src="../dist/second-web-component/polyfills.js"></script>
-  <script src="../dist/second-web-component/runtime.js"></script>
+<script src="_content/Microsoft.AspNetCore.Components.CustomElements/BlazorCustomElements.js"></script>
+<script src="_framework/blazor.webassembly.js"></script>
 
-  <script src="../dist/first-web-component/main.js"></script>
-  <script src="../dist/first-web-component/styles.css"></script>
+  <script src="second-web-component/polyfills.js"></script>
+  <script src="second-web-component/runtime.js"></script>
 
-  <script src="../dist/second-web-component/main.js"></script>
-  <script src="../dist/second-web-component/styles.css"></script>
+  <script src="first-web-component/main.js"></script>
+  <script src="first-web-component/styles.css"></script>
+
+  <script src="second-web-component/main.js"></script>
+  <script src="second-web-component/styles.css"></script>
 
   <style>
     .card {
@@ -145,13 +148,27 @@
     document.getElementById(&quot;replaceWebComponent&quot;).innerHTML = &quot;&lt;ui-button&gt;&lt;/ui-button&gt;&quot;;
   }
   function addDataDisplayFunction() {
-    document.getElementById(&quot;replaceWebComponent&quot;).innerHTML = &quot;&lt;data-display address=\&quot;http://localhost:5500/data\&quot;&gt;&lt;/data-display&gt;&quot;;
+    document.getElementById(&quot;replaceWebComponent&quot;).innerHTML = &quot;&lt;data-display 
+    address=\&quot;http://localhost:5500/data\&quot;&gt;&lt;/data-display&gt;&quot;;
   }
 &lt;/script&gt;
 &lt;div class=&quot;card&quot;&gt;
   &lt;div class=&quot;container&quot; id=&quot;replaceWebComponent&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre></code>
+      </td>
+    </tr>
+    <tr>
+      <td>Blazor WebAssembly WebComponenent.</td>
+      <td>
+        <div class="card">
+          <div class="container">
+            <my-blazor-counter></my-blazor-counter>
+          </div>
+        </div>
+      </td>
+      <td>
+        <code><pre>&lt;my-blazor-counter&gt;&lt;/my-blazor-counter&gt;</pre></code>
       </td>
     </tr>
   </table>
